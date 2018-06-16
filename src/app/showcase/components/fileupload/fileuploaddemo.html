@@ -32,7 +32,7 @@
             <h3>Import</h3>
 <pre>
 <code class="language-typescript" pCode ngNonBindable>
-import &#123;FileUploadModule&#125; from 'primeng/primeng';
+import &#123;FileUploadModule&#125; from 'primeng/fileupload';
 </code>
 </pre>
 
@@ -356,7 +356,7 @@ myUploader(event) &#123;
                             <td>onProgress</td>
                             <td>event.originalEvent: Original browser event. <br />
                                 event.progress: Calculated progress value.</td>
-                            <td>Callback to invoke when files are selected.</td>
+                            <td>Callback to invoke when files are being uploaded.</td>
                         </tr>
                         <tr>
                             <td>uploadHandler</td>
@@ -435,7 +435,7 @@ myUploader(event) &#123;
 &lt;h3 class="first"&gt;Advanced&lt;/h3&gt;
 &lt;p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" 
         multiple="multiple" accept="image/*" maxFileSize="1000000"&gt;
-    &lt;ng-template pTemplate type="content"&gt;
+    &lt;ng-template pTemplate="content"&gt;
         &lt;ul *ngIf="uploadedFiles.length"&gt;
             &lt;li *ngFor="let file of uploadedFiles"&gt;&#123;&#123;file.name&#125;&#125; - &#123;&#123;file.size&#125;&#125; bytes&lt;/li&gt;
         &lt;/ul&gt;
